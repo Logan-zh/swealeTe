@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        swal({
+            title:'猜謎遊戲',
+            text:'這是一個開始。',
+            icon:'icon.jpg',
+            buttons:['沒興趣','OK'],
+        }).then(is=>{
+            if(is){swal('題目1',`門裡有一個人?`,{
+                icon:'info',
+                content:'input',
+                button:'送出',     
+                }
+            ).then(is=>{
+                switch(is){
+                    case '閃':
+                        swal('答對囉').then(()=>{
+                            swal({
+                                title:'題目2',
+                                text:'什麼樣的水可以放在口袋?',
+                                content:'input',
+                                button:'送出',
+                            }).then(is=>{
+                                switch(is){
+                                    case '薪水':
+                                        swal('答對囉').then(()=>{
+                                            swal({
+                                                title:'題目3',
+                                                text:'等等',
+                                                button:'送出',
+                                            })
+                                        })
+                                    break;
+                                    default:
+                                    swal('回第一關重新想想')
+                                }
+                            })
+                        })
+                    break;
+                    default:
+                        swal('回第一關重新想想')
+                }    
+            })}else{
+                
+            }
+        })
+    </script>
+</body>
+</html>
