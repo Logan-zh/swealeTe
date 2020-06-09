@@ -11,27 +11,44 @@
         swal({
             title:'猜謎遊戲',
             text:'這是一個開始。',
+<<<<<<< HEAD
             buttons:['沒興趣','OK'],
         }).then(is=>{
             if(is){swal('門裡有一個人?',`猜一個字`,{
                 icon:'info',
+=======
+            icon:'https://cdn.pixabay.com/photo/2017/03/07/13/02/question-mark-2123969__340.jpg',
+            buttons:['沒興趣','OK'],
+        }).then(is=>{
+            if(is){swal(`門裡站著一個人`,{
+                icon:'https://us.123rf.com/450wm/zeferli/zeferli1808/zeferli180800434/109371472-silhouette-of-an-unknown-shadow-figure-on-a-door-through-a-closed-glass-door-the-silhouette-of-a-hum.jpg?ver=6',
+>>>>>>> new
                 content:'input',
-                button:'送出',     
+                button:'提交',     
                 }
             ).then(is=>{
                 switch(is){
                     case '閃':
-                        swal('答對囉').then(()=>{
+                        swal('答對囉',{
+                            icon:'success'
+                        }).then(()=>{
                             swal({
                                 title:'什麼樣的水可以放在口袋?',
+<<<<<<< HEAD
                                 text:'每個月會拿到',
+=======
+>>>>>>> new
                                 content:'input',
-                                button:'送出',
+                                icon:'https://cdn.pixabay.com/photo/2019/06/08/22/14/drum-4261138_960_720.jpg',
+                                button:'提交',
                             }).then(is=>{
                                 switch(is){
                                     case '薪水':
-                                        swal('答對囉').then(()=>{
+                                        swal('答對囉',{
+                                            icon:'success'
+                                        }).then(()=>{
                                             swal({
+<<<<<<< HEAD
                                                 title:'等等',
                                                 text:'',
                                                 button:'送出',
@@ -68,19 +85,52 @@
                                                         break;
                                                         default:
                                                             swal('回第一關重新想想')
+=======
+                                                title:'等等!',
+                                                button:'提交',
+                                            }).then(()=>{
+                                                swal({
+                                                    title:'什麼東西借了不用還?',
+                                                    button:'提交',
+                                                    icon:'https://media.swncdn.com/cms/CW/Finances/25364-lending-borrowing-money-shake-hands-debt-dollars-business-deal-wide.1200w.tn.jpg',
+                                                    content:'input',
+                                                }).then(is=>{
+                                                    if(is=='借過'){
+                                                        swal({
+                                                            title:'你真棒!',
+                                                            icon:'success',
+                                                            button:'OK',
+                                                            icon:'https://midgardediting.files.wordpress.com/2015/06/2015-06-27-where-are-you-come-from.jpg',
+                                                        }).then(()=>{
+                                                            swal({
+                                                                title:'	綠豆哪裡人',
+                                                                content:'input',
+                                                            }).then(is=>{
+                                                                if(is=='嘉義人'){
+                                                                    swal({
+                                                                        title:'你真棒!',
+                                                                        icon:'success',
+                                                                        button:'OK',
+                                                                    })
+                                                                }
+                                                            })
+                                                        })
+                                                    }else{
+                                                        swal('借錢要還，誰還要借!')
+>>>>>>> new
                                                     }
                                                 })
                                             })
                                         })
                                     break;
                                     default:
-                                    swal('回第一關重新想想')
+                                    swal('回第一關重新來過')
                                 }
                             })
                         })
                     break;
                     default:
-                        swal('回第一關重新想想')
+                        swal('回第一關重新來過')
                 }    
             })}else{
                 
