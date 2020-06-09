@@ -11,10 +11,9 @@
         swal({
             title:'猜謎遊戲',
             text:'這是一個開始。',
-            icon:'icon.jpg',
             buttons:['沒興趣','OK'],
         }).then(is=>{
-            if(is){swal('題目1',`門裡有一個人?`,{
+            if(is){swal('門裡有一個人?',`猜一個字`,{
                 icon:'info',
                 content:'input',
                 button:'送出',     
@@ -24,8 +23,8 @@
                     case '閃':
                         swal('答對囉').then(()=>{
                             swal({
-                                title:'題目2',
-                                text:'什麼樣的水可以放在口袋?',
+                                title:'什麼樣的水可以放在口袋?',
+                                text:'每個月會拿到',
                                 content:'input',
                                 button:'送出',
                             }).then(is=>{
@@ -33,9 +32,44 @@
                                     case '薪水':
                                         swal('答對囉').then(()=>{
                                             swal({
-                                                title:'題目3',
-                                                text:'等等',
+                                                title:'等等',
+                                                text:'',
                                                 button:'送出',
+                                            }).then(()=>{
+                                                swal({
+                                                    title:'	情人眼裡出西施，那麼西施眼裡出什麼？',
+                                                    text:'猜二個字',
+                                                    content:'input',
+                                                    button:'送出',
+                                                }).then(is=>{
+                                                    switch(is){
+                                                        case '眼屎':
+                                                            swal('答對囉').then(()=>{
+                                                                swal({
+                                                                    title:'偷什麼不犯法?',
+                                                                    content:'input',
+                                                                    button:'提交',
+                                                                }).then(is=>{
+                                                                    switch(is){
+                                                                        case '偷笑':
+                                                                            swal('答對囉').then({
+                                                                                swal({
+                                                                                    title:'借什麼不必還?',
+                                                                                    content:'input',
+                                                                                    button:'提交',
+                                                                                })
+                                                                            })
+                                                                        break;
+                                                                        default:
+                                                                        swal('回第一關重新想想')
+                                                                    }
+                                                                })
+                                                            })
+                                                        break;
+                                                        default:
+                                                            swal('回第一關重新想想')
+                                                    }
+                                                })
                                             })
                                         })
                                     break;
