@@ -1,92 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <title>Document</title>
-</head>
-<body>
-    <script>
-        swal({
-            title:'猜謎遊戲',
-            text:'這是一個開始。',
-            icon:'https://cdn.pixabay.com/photo/2017/03/07/13/02/question-mark-2123969__340.jpg',
-            buttons:['沒興趣','OK'],
-        }).then(is=>{
-            if(is){swal(`門裡站著一個人`,{
-                icon:'https://us.123rf.com/450wm/zeferli/zeferli1808/zeferli180800434/109371472-silhouette-of-an-unknown-shadow-figure-on-a-door-through-a-closed-glass-door-the-silhouette-of-a-hum.jpg?ver=6',
-                content:'input',
-                button:'提交',     
-                }
-            ).then(is=>{
-                switch(is){
-                    case '閃':
-                        swal('答對囉',{
-                            icon:'success'
-                        }).then(()=>{
-                            swal({
-                                title:'什麼樣的水可以放在口袋?',
-                                content:'input',
-                                icon:'https://cdn.pixabay.com/photo/2019/06/08/22/14/drum-4261138_960_720.jpg',
-                                button:'提交',
-                            }).then(is=>{
-                                switch(is){
-                                    case '薪水':
-                                        swal('答對囉',{
-                                            icon:'success'
-                                        }).then(()=>{
-                                            swal({
-                                                title:'等等!',
-                                                icon:'https://memes.tw/user-template/b81fa7d87499a972b9cd55cbdd3cf716.png',
-                                                button:'提交',
-                                            }).then(()=>{
-                                                swal({
-                                                    title:'什麼東西借了不用還?',
-                                                    button:'提交',
-                                                    icon:'https://media.swncdn.com/cms/CW/Finances/25364-lending-borrowing-money-shake-hands-debt-dollars-business-deal-wide.1200w.tn.jpg',
-                                                    content:'input',
-                                                }).then(is=>{
-                                                    if(is=='借過'){
-                                                        swal({
-                                                            title:'你真棒!',
-                                                            icon:'success',
-                                                            button:'OK',
-                                                            icon:'https://midgardediting.files.wordpress.com/2015/06/2015-06-27-where-are-you-come-from.jpg',
-                                                        }).then(()=>{
-                                                            swal({
-                                                                title:'	綠豆哪裡人',
-                                                                content:'input',
-                                                            }).then(is=>{
-                                                                if(is=='嘉義人'){
-                                                                    swal({
-                                                                        title:'你真棒!',
-                                                                        icon:'success',
-                                                                        button:'OK',
-                                                                    })
-                                                                }
-                                                            })
-                                                        })
-                                                    }else{
-                                                        swal('借錢要還，誰還要借!')
-                                                    }
-                                                })
-                                            })
-                                        })
-                                    break;
-                                    default:
-                                    swal('回第一關重新來過')
-                                }
-                            })
-                        })
-                    break;
-                    default:
-                        swal('回第一關重新來過')
-                }    
-            })}else{
-                
-            }
-        })
-    </script>
-</body>
-</html>
+<script>
+    let name;
+    if(name = prompt('你的大名','大俠')){
+        alert('你好'+name);
+    }else{
+        alert('想不到，通通叫大俠');
+    }
+    
+    function g(){
+    if(a('生命教育之推動是為了強化學生身心靈健全的全人教育，使學生活在天、人、物、我的均衡關係中。','很棒喔','生命教育不及格',true))return;
+    if(a('設教興學以教化人民，是為政者對其子民責無旁貸的任務，是當今政府迎接未來新世紀的教育承諾。','那你很棒喔','無法教化',true))return;
+    if(a('政府擬構政策必須看見，仁政、王道，這是中華文化政治的精髓；孝親、尊師，這是育才的基石。','GOOD','百善孝為先',true))return;
+    if(a('善良、誠正、勤樸，這是形塑祥和校園環境的基礎；而愛心、關懷、尊重、感恩，卻是打破社會人際、一切黨派隔閡無形而澎湃的力量。','還差一點','尊重、包容、友善',true))return;
+    if(a('生命教育是教育施政理念與政策摒棄實現人-己-物之和諧。','恭喜你通關','就差最後一步',false))return;
+    if(confirm('要前往sa版嗎?'))location.href='extra.html';
+    }
+    function a(a,g,b,s){
+        if(confirm(a)===s){
+            alert(g);
+        }else{
+            alert(b);
+            return true;
+        }
+    }
+    g();
+</script>
